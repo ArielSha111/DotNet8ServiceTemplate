@@ -1,12 +1,9 @@
-﻿using Microsoft.Extensions.Configuration;
-
-namespace Model.DB;
+﻿namespace Model.DB;
 public class DbManager : IDbManager
 {
     private readonly string _connectionString;
 
-    public DbManager(IConfiguration configuration)
+    public DbManager()
     {
-        _connectionString = configuration.GetSection("AppSettings")["DatabaseConnectionString"];
     }
 }

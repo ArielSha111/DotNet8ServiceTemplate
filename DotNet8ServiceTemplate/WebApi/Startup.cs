@@ -1,5 +1,4 @@
 ﻿using Service;
-using Model.Http;
 using Model.DB;
 
 public static class Startup
@@ -16,7 +15,6 @@ public static class Startup
     private static void SetDiRegistration(IServiceCollection services)
     {
         services.AddSingleton<IExampleService, ExampleService>();
-        services.AddSingleton<IHttpManager, HttpManager>();
         services.AddSingleton<IDbManager, DbManager>();
     }
 }
